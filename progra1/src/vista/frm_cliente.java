@@ -52,10 +52,11 @@ public class frm_cliente extends javax.swing.JFrame {
         btn_crear = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_clientes = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbl_titulo.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lbl_titulo.setFont(new java.awt.Font("Dyuthi", 0, 18)); // NOI18N
         lbl_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_titulo.setText("Formulario de cliente");
 
@@ -91,41 +92,49 @@ public class frm_cliente extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tbl_clientes);
 
+        jButton1.setText("Actualizar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnl_encabezadoLayout = new javax.swing.GroupLayout(pnl_encabezado);
         pnl_encabezado.setLayout(pnl_encabezadoLayout);
         pnl_encabezadoLayout.setHorizontalGroup(
             pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_encabezadoLayout.createSequentialGroup()
-                .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_encabezadoLayout.createSequentialGroup()
-                        .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnl_encabezadoLayout.createSequentialGroup()
-                                .addGap(195, 195, 195)
-                                .addComponent(lbl_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnl_encabezadoLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbl_nit)
-                                    .addComponent(lbl_nombres)
-                                    .addComponent(lbl_apellidos)
-                                    .addComponent(lbl_direccion)
-                                    .addComponent(lbl_telefono)
-                                    .addComponent(lbl_fn))
-                                .addGap(23, 23, 23)
-                                .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txt_nit)
-                                    .addComponent(txt_nombres, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                                    .addComponent(txt_apellidos)
-                                    .addComponent(txt_direccion)
-                                    .addComponent(txt_telefono)
-                                    .addComponent(txt_fn))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
+                .addComponent(jScrollPane1)
                 .addContainerGap())
             .addGroup(pnl_encabezadoLayout.createSequentialGroup()
                 .addGap(119, 119, 119)
                 .addComponent(btn_crear)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addComponent(jButton1)
+                .addContainerGap(306, Short.MAX_VALUE))
+            .addGroup(pnl_encabezadoLayout.createSequentialGroup()
+                .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_encabezadoLayout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(lbl_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnl_encabezadoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_nit)
+                            .addComponent(lbl_nombres)
+                            .addComponent(lbl_apellidos)
+                            .addComponent(lbl_direccion)
+                            .addComponent(lbl_telefono)
+                            .addComponent(lbl_fn))
+                        .addGap(23, 23, 23)
+                        .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_nit)
+                            .addComponent(txt_nombres, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(txt_apellidos)
+                            .addComponent(txt_direccion)
+                            .addComponent(txt_telefono)
+                            .addComponent(txt_fn))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         pnl_encabezadoLayout.setVerticalGroup(
             pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +149,7 @@ public class frm_cliente extends javax.swing.JFrame {
                 .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombres)
                     .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(17, 17, 17)
                 .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_apellidos)
                     .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -157,10 +166,12 @@ public class frm_cliente extends javax.swing.JFrame {
                     .addComponent(lbl_fn)
                     .addComponent(txt_fn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btn_crear)
+                .addGroup(pnl_encabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_crear)
+                    .addComponent(jButton1))
                 .addGap(37, 37, 37)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,15 +190,23 @@ public class frm_cliente extends javax.swing.JFrame {
 
     private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
         // TODO add your handling code here:
-        /*cliente = new Cliente(txt_nit.getText(),txt_nombres.getText(),txt_apellidos.getText(),txt_direccion.getText(),txt_telefono.getText(),txt_fn.getText());
-        cliente.leer();
-        */
-        
+        cliente = new Cliente(txt_nit.getText(),txt_nombres.getText(),txt_apellidos.getText(),txt_direccion.getText(),txt_telefono.getText(),txt_fn.getText());
+        //cliente.leer();
+            tblModelo.addRow(cliente.crear());
+            tbl_clientes.setModel(tblModelo);
+    }//GEN-LAST:event_btn_crearActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        cliente = new Cliente();
         cliente.setNit(txt_nit.getText());
         cliente.setNombres(txt_nombres.getText());
-        cliente.setApellidos(txt_apellidos.getText());
+        cliente.setApellidos(txt_nombres.getText());
         cliente.setDireccion(txt_direccion.getText());
-    }//GEN-LAST:event_btn_crearActionPerformed
+        cliente.setTelefono(txt_telefono.getText());
+        cliente.setFecha_nacimiento(txt_fn.getText());
+        cliente.leer();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,6 +245,7 @@ public class frm_cliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_crear;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_apellidos;
     private javax.swing.JLabel lbl_direccion;
